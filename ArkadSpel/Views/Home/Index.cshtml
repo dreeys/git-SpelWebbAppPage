@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="~/css/styles.css">
+<script src="~/js/script.js"></script>
+
+
+<div class="filter">
+    <label for="category">Välj kategori:</label>
+    <select id="categorySelect">
+        <option value="Alla">Alla</option>
+        <option value="Fighting">Fighting</option>
+        <option value="Racing">Racing</option>
+        <option value="Retro">Retro</option>
+    </select>
+</div>
+
+<div class="game-grid">
+    <div class="game-card hot" data-category="Fighting">
+        <span class="badge">HOT 🔥</span>
+        <img src="~/images/street-fighter.jpg" alt="Street Fighter VI">
+        <h3>Street Fighter VI</h3>
+        <p>Fighting</p>
+    </div>
+    <div class="game-card hot" data-category="Racing">
+        <span class="badge">HOT 🔥</span>
+        <img src="~/images/mario-kart.jpg" alt="Mario Kart">
+        <h3>Mario Kart</h3>
+        <p>Racing</p>
+
+    </div>
+    <div class="game-card" data-category="Retro">
+        <img src="~/images/pacman.jpg" alt="Pac-Man">
+        <h3>Pac-Man</h3>
+        <p>Retro</p>
+    </div>
+    <div class="game-card" data-category="Racing">
+        <img src="~/images/need-for-speed.jpg" alt="Need for Speed">
+        <h3>Need for Speed</h3>
+        <p>Racing</p>
+    </div>
+    <div class="game-card" data-category="Retro">
+        <img src="~/images/galaga.jpg" alt="Galaga">
+        <h3>Galaga</h3>
+        <p>Retro</p>
+    </div>
+    <div class="game-card" data-category="Fighting">
+        <img src="~/images/tekken7.jpg" alt="Tekken 7">
+        <h3>Tekken 7</h3>
+        <p>Fighting</p>
+    </div>
+</div>
