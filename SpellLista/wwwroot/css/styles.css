@@ -1,0 +1,209 @@
+﻿body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #8e2de2, #4a00e0);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 10px;
+}
+
+.filter {
+    margin-bottom: 20px;
+}
+
+.category-button {
+    background: #e91e63;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.game-card {
+    background: #4a0072;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+}
+
+    .game-card:hover {
+        transform: scale(1.05);
+    }
+
+    .game-card img {
+        width: 100%;
+        border-radius: 10px;
+        height: 70%;
+    }
+
+h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff5722;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+
+.filter {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+    .filter label {
+        font-size: 1rem;
+        font-weight: bold;
+        color: white;
+        margin-right: 10px;
+    }
+
+#categorySelect {
+    background: #e91e63;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    outline: none;
+}
+
+
+    #categorySelect:hover {
+        background: #c2185b;
+    }
+
+    #categorySelect option {
+        background: white;
+        color: black;
+        font-size: 1rem;
+    }
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: teal;
+}
+
+
+#modalTitle {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+}
+
+
+.modal-content {
+    background: purple;
+    padding: 20px;
+    width: 70%; /* Increase width (adjust as needed) */
+    max-width: 800px; /* Set a max-width to prevent it from getting too large */
+    height: auto; /* Allow dynamic height */
+    max-height: 90vh; /* Prevent overflow on smaller screens */
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+    .modal-content img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .modal-content iframe {
+        width: 100%;
+        height: 400px; /* Increase video height */
+        border-radius: 8px;
+    }
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Button Styles */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Radera Button (Delete) */
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+    .btn-danger:hover {
+        background-color: #c82333;
+        transform: scale(1.05);
+    }
+
+/* Skapa Button (Create) */
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+

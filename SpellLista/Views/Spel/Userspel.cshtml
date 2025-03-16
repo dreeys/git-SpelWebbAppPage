@@ -1,0 +1,65 @@
+﻿@model IEnumerable<SpellLista.Models.Spel>
+
+<link rel="stylesheet" href="~/css/styles.css">
+<script src="~/js/script.js"></script>
+
+<h1>Våra Spel!</h1>
+<h2>Upptäck vårt spelsortiment</h2>
+
+<div class="filter">
+    <label for="categorySelect">Välj kategori:</label>
+    <select id="categorySelect">
+        <option value="Alla">Alla</option>
+        <option value="Fighting">Fighting</option>
+        <option value="Racing">Racing</option>
+        <option value="Retro">Retro</option>
+    </select>
+</div>
+
+<div id="gameModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle"></h2> 
+        <iframe id="modalVideo" width="100%" height="250" src="" frameborder="0" allowfullscreen></iframe>
+        <p id="modalDescription"></p> 
+    </div>
+</div>
+
+<div class="game-grid">
+    @foreach (var spel in Model)
+    {
+        <div class="game-card"
+             data-title="@spel.Titel"
+             data-category="@spel.Kategori"
+             data-image="@spel.BildUrl"
+             data-description="@spel.Beskrivning"
+             data-video="@spel.TrailerUrl">
+
+            
+            <img src="@spel.BildUrl" alt="@spel.Titel" width="150" />
+
+            <h3>@spel.Titel</h3>
+
+            <p>@spel.Kategori</p>
+
+        </div>
+    }
+</div>
+
+<script>
+    document.getElementById("categorySelect").addEventListener("change", function () {
+        var selectedCategory = this.value;
+        var gameCards = document.querySelectorAll(".game-card");
+
+        gameCards.forEach(function (card) {
+            var category = card.getAttribute("data-category");
+
+            // Visa alla spel om "Alla" är valt
+            if (selectedCategory === "Alla" || category === selectedCategory) {
+                card.style.display = "block";  // Visa spelet
+            } else {
+                card.style.display = "none";  // Dölj spelet
+            }
+        });
+    });
+</script>

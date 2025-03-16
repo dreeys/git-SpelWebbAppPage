@@ -1,0 +1,29 @@
+﻿@model SpellLista.Models.Spel
+
+<h2>Lägg till ett nytt spel</h2>
+
+<form method="post">
+    <label for="Titel">Titel:</label>
+    <input asp-for="Titel" required />
+
+    <label for="Kategori">Kategori:</label>
+    <select asp-for="Kategori">
+        <option>Racing</option>
+        <option>Retro</option>
+        <option>Fighting</option>
+    </select>
+
+    <label for="Betyg">Betyg:</label>
+    <input asp-for="Betyg" type="number" min="1" max="10" required />
+
+    <label for="Beskrivning">Beskrivning:</label>
+    <textarea asp-for="Beskrivning"></textarea>
+
+    <label for="BildUrl">Bild-URL:</label>
+    <input asp-for="BildUrl" />
+
+    <label for="TrailerUrl">Trailer-URL:</label>
+    <input asp-for="TrailerUrl" />
+
+    <button type="submit">Lägg till</button>
+</form>
